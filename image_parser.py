@@ -21,7 +21,7 @@ def image_parser():
     
     for pack in data:
         if pack["banner"] and os.path.exists(pack["banner"]):
-            pack_banner_path = os.path.join(IMAGE_PATH, f'{pack["title"]}.webp')
+            pack_banner_path = os.path.join(IMAGE_PATH, f'{pack["name"]}.webp')
             try:
                 convert_to_webp(pack["banner"], pack_banner_path)
             except Exception as e:
@@ -30,7 +30,7 @@ def image_parser():
         for song in pack["songs"]:
 
             if song["banner"] and os.path.exists(song["banner"]):
-                song_banner_path = os.path.join(IMAGE_PATH, f'{sanitize_name(pack["title"])}__{sanitize_name(song["title"])}.webp')
+                song_banner_path = os.path.join(IMAGE_PATH, f'{sanitize_name(pack["name"])}__{sanitize_name(song["title"])}.webp')
                 try:
                     convert_to_webp(song["banner"], song_banner_path)
                 except Exception as e:
