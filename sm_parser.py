@@ -4,9 +4,13 @@ from simfile.ssc import SSCChart
 import os
 import orjson
 from dataclasses import dataclass
+from dotenv import load_dotenv
 
-
-songs_path = '/home/dance/Desktop/Songs'
+load_dotenv()
+if os.getenv("LOCAL"):
+    songs_path = '/opt/itgmania/Songs'
+else:
+    songs_path = '/home/dance/Desktop/Songs'
 
 @dataclass
 class ChartDetails:
