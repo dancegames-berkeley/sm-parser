@@ -5,7 +5,6 @@ from PIL import Image
 
 IMAGE_PATH = 'banner'
 
-
 def sanitize_name(name):
     name = name.replace(' ', '_')
     name = re.sub(r'[^a-zA-Z0-9_\-]', '', name)

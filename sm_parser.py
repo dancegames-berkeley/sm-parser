@@ -7,7 +7,7 @@ from dataclasses import dataclass
 from dotenv import load_dotenv
 
 load_dotenv()
-if os.getenv("LOCAL"):
+if os.getenv("LOCAL") == 'true':
     songs_path = '/opt/itgmania/Songs'
 else:
     songs_path = '/home/dance/Desktop/Songs'
