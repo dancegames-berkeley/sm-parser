@@ -1,0 +1,11 @@
+appdirs==1.4.4
+certifi==2024.12.14
+charset-normalizer==3.4.1
+fs==2.4.16
+idna==3.10
+msdparser==2.0.0
+PyYAML==6.0.2
+requests==2.32.3
+simfile==2.1.1
+six==1.17.0
+urllib3==2.3.0
