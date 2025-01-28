@@ -29,7 +29,7 @@ class SongDetails:
 
 @dataclass
 class PackDetails:
-    title: str
+    name: str
     banner: str
     songs: list[SongDetails]
 
@@ -70,7 +70,7 @@ def parser():
             continue
         
         pack_data = PackDetails(
-            title = pack.name,
+            name = pack.name,
             banner = pack.banner(),
             songs = songs
         )
