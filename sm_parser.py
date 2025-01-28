@@ -38,6 +38,7 @@ def parser():
         except:
             continue
         songs = []
+        path_iterator = pack.simfile_dirs()
         try:
             for song in pack.simfiles():
                 song_data = SongDetails
@@ -56,7 +57,7 @@ def parser():
                     title = song.title,
                     artist = song.artist,
                     credit = song.credit,
-                    banner = song.banner,
+                    banner = os.path.join(os.path.dirname(next(path_iterator).simfile_path), song.banner) if song.banner else None,
                     charts = charts_list
                 )
                 songs.append(song_data)
