@@ -56,12 +56,12 @@ def parser():
                         steps_type = chart.stepstype
                     )
                     charts_list.append(chart_data)
-
+                simfile_path = next(path_iterator).simfile_path
                 song_data = SongDetails(
                     title = song.title,
                     artist = song.artist,
                     credit = song.credit,
-                    banner = os.path.join(os.path.dirname(next(path_iterator).simfile_path), song.banner) if song.banner else None,
+                    banner = os.path.join(os.path.dirname(simfile_path), song.banner) if song.banner else None,
                     charts = charts_list
                 )
                 songs.append(song_data)

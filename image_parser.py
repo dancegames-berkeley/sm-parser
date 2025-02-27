@@ -7,7 +7,7 @@ IMAGE_PATH = 'banner'
 
 def sanitize_name(name):
     name = name.replace(' ', '_')
-    name = re.sub(r'[^a-zA-Z0-9_\-]', '', name)
+    name = re.sub(r'[^\w\-]', '', name, flags=re.UNICODE)
     return name
 
 def convert_to_webp(src, dest):
